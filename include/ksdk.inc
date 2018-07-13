@@ -57,3 +57,4 @@ KDATA(0x1AC60E0, kernel_map, void *);
 KDATA(0x10986a0, prison0, void *);
 KDATA(0x22C1A70, rootvnode, void *);
 KDATA(0x2382FF8, allproc, struct proc *);
+KDATA(0x107C610, sysents, struct sysent);

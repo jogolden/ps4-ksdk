@@ -198,6 +198,17 @@ TYPE_FIELD(struct vm_map vm_map, 0);
 // maybe I will add more later just for documentation purposes
 TYPE_END();
 
+TYPE_BEGIN(struct sysent, 0x30);
+TYPE_FIELD(uint32_t sy_narg, 0x00);
+TYPE_FIELD(void *sy_call, 0x08);
+TYPE_FIELD(uint16_t sy_auevent, 0x10);
+TYPE_FIELD(uint64_t sy_systrace_args_func, 0x18);
+TYPE_FIELD(uint32_t sy_entry, 0x20);
+TYPE_FIELD(uint32_t sy_return, 0x24);
+TYPE_FIELD(uint32_t sy_flags, 0x28);
+TYPE_FIELD(uint32_t sy_thrcnt, 0x2C);
+TYPE_END();
+
 struct auditinfo_addr {
 	uint8_t useless[184];
 };
